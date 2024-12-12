@@ -35,5 +35,31 @@ The project includes:
 ---
 
 
-## Project 2
+# Project 2: Bulk Deconvolution and Single-Cell Clustering
 
+This project aimed to analyze single-cell and bulk gene expression data from patients with esophageal adenocarcinoma. Two tasks were performed: deconvolution of bulk data to estimate cell type proportions and clustering of single-cell data to identify biologically meaningful cell groups.
+
+## Workflow
+
+### 1. Bulk Data Deconvolution
+- **Objective**: Estimate the proportions of nine cell types (e.g., T cells, B cells, NK cells) from bulk gene expression data.
+- **Methodology**:
+  - Scaden was used for deconvolution due to its ease of implementation.
+  - Preprocessing included filtering genes present in at least 80 cells, removing low-quality cells, normalizing the data, applying a log transformation, and scaling.
+  - Achieved a **mean RMSE** of 0.087 on the test data.
+
+### 2. Single-Cell Clustering
+- **Objective**: Identify clusters of biologically meaningful cell types from single-cell data.
+- **Methodology**:
+  - Explored various clustering techniques, starting with UMAP and PCA for dimensionality reduction.
+  - Batch effects were corrected using Harmony and Scanpy's integrated tools.
+  - Leiden clustering with fine-tuned parameters provided the best results, producing nine clusters at a resolution of 0.3.
+
+## Project Deliverables
+The project includes:
+- Preprocessing scripts and analysis code.
+- Results for deconvolution and clustering in the required file formats.
+- An annotated Jupyter notebook detailing the steps and decisions.
+
+
+---
