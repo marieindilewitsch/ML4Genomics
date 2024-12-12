@@ -12,6 +12,7 @@ Data Preprocessing and feature engineering is carried out based on TSS-centered 
 
 
 This project aimed to predict gene expression for unseen cell lines using epigenetic data. The workflow was divided into three key stages: data preprocessing, model training, and evaluation.
+
 	•	Data Preprocessing: We used ChIP-Seq and DNase-Seq data for multiple histone marks and chromatin accessibility, integrating these with CAGE-seq gene expression data. Key decisions included selecting relevant histone marks, optimizing data normalization, and extracting features based on TSS-centered genomic windows.
 	•	Model Development: Both linear and XGBoost regression models were tested, with XGBoost achieving better performance. The optimal configuration resulted in a Spearman’s correlation of ~0.789 on validation data.
 	•	Evaluation: The final model was evaluated on unseen data using Spearman’s correlation, emphasizing its ability to rank gene expression accurately.
